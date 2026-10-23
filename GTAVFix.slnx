@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/GTAVFix.Core/GTAVFix.Core.csproj" />
+    <Project Path="src/GTAVFix.App/GTAVFix.App.csproj" />
+    <Project Path="src/GTAVFix.Verify/GTAVFix.Verify.csproj" />
+  </Folder>
+</Solution>

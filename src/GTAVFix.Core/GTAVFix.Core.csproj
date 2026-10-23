@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup><EmbeddedResource Include="Resources/magic.dat" /><EmbeddedResource Include="Resources/Strings/*.json" /></ItemGroup>
+</Project>

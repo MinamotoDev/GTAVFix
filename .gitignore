@@ -1,0 +1,24 @@
+# Local research, extracted game assets and third-party tools
+/research/
+
+# Build output
+**/bin/
+**/obj/
+/artifacts/
+/dist/
+
+# Local configuration and backups
+.vs/
+.idea/
+*.user
+*.suo
+*.log
+/backups/
+/logs/
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.pyc
+.venv/

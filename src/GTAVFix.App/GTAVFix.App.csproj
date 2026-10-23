@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>GTAVFix</AssemblyName>
+    <PackageId>app.minamotodev.gtavfix</PackageId>
+    <Product>GTAVFix</Product>
+    <Description>GTA V Enhanced multilingual font patcher</Description>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets/App.ico</ApplicationIcon>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../GTAVFix.Core/GTAVFix.Core.csproj" /></ItemGroup>
+  <ItemGroup><Resource Include="Assets/App.ico" /></ItemGroup>
+</Project>

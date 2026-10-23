@@ -1,0 +1,25 @@
+name: Build
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build verifier
+        run: dotnet build src/GTAVFix.Verify/GTAVFix.Verify.csproj -c Release
+      - name: Verify backup and restore
+        run: dotnet src/GTAVFix.Verify/bin/Release/net10.0-windows/GTAVFix.Verify.dll --transactions artifacts/transaction-ci
+      - name: Verify localization
+        run: dotnet src/GTAVFix.Verify/bin/Release/net10.0-windows/GTAVFix.Verify.dll --localization
+      - name: Publish EXE
+        shell: pwsh
+        run: ./build.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GTAVFix-win-x64
+          path: artifacts/release/*/GTAVFix.exe
